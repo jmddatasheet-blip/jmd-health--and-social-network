@@ -18,16 +18,4 @@ To use it:
 2. Push to `main`. The Action will run, build (`hugo --minify`) and publish the `public/` output to GitHub Pages.
 3. Check Actions → Workflows in GitHub to see build logs. If the workflow fails, open the run and inspect the 'Build' step logs.
 
-If you prefer deploying to a `gh-pages` branch or need a specific Hugo version, tell me and I can adjust the workflow.
-
-Alternatively, the repository also includes a `gh-pages` deploy workflow that pushes the built site to a `gh-pages` branch using a Personal Access Token (PAT):
-
-- Workflow file: `.github/workflows/deploy-gh-pages.yml` (builds with Hugo and pushes `public/` to `gh-pages` using peaceiris/actions-gh-pages).
-
-To use the `gh-pages` workflow you must create a PAT and set it as a repository secret named `GH_PAGES_TOKEN`:
-
-1. Create a Personal Access Token at https://github.com/settings/tokens with `repo` scope (or at least `repo:public_repo` for public repos).
-2. In your repository, go to Settings → Secrets and variables → Actions → New repository secret. Name it `GH_PAGES_TOKEN` and paste the PAT.
-3. Push to `main` to trigger the workflow which will build and push the `public/` output to the `gh-pages` branch.
-
-Note: Keep the PAT secret and rotate it if it is ever exposed.
+If you prefer a different deployment method or need a specific Hugo version, tell me and I can adjust the workflow.
